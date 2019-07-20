@@ -1,0 +1,19 @@
+<h1> homes#index </h1>
+
+아래에 데이터를 입력하세요
+
+<form action='/homes/create' method='get'>
+    이름: <input type='text' name='namename'>
+    내용: <input type='text' name='contentcontent'>
+    나이: <input type='integer' name='ageage'>
+    <input type='submit' value='데이터 생성하기'>
+</form>
+
+<hr>
+
+<% @all_data.each do |one_single_post| %>
+    저장하신 이름은: <%= one_single_post.m_name %>
+    저장하신 내용은: <%= one_single_post.m_content %>
+    저장하신 나이는: <%= one_single_post.m_age %>
+    <br>
+<% end %>
